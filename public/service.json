@@ -1,0 +1,45 @@
+[
+    {
+      "id": "1",
+      "name": "Conferences and Seminars",
+      "price": "$ 20k",
+      "description": "Lorem ipsum dolor sit amet, that is a good company for me consectetur adipiscing elit.",
+      "cover": "https://i.ibb.co/dJTtccn/desktop-wallpaper-corporate-event-management-company-lahore.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Trade Shows and Expos",
+      "price": "$ 30k",
+      "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "cover": "https://i.ibb.co/zX44cqX/9650797288828eb5c5bc217794413072.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Team Building Workshops",
+      "price": "$ 15k",
+      "description": "Ut enim ad minim  ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "cover": "https://i.ibb.co/Th9H6wB/desktop-wallpaper-party-planner-event-management-thumbnail.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Product Launches",
+      "price": "$ 25k",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "cover": "https://i.ibb.co/pZdLhGY/cambridge-corporate-photographer-io-2016-003.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Corporate Meetings",
+      "price": "$ 10k",
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "cover": "https://i.ibb.co/X513NRm/my-met-pic.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Award Ceremonies",
+      "price": "$ 40k",
+      "description": "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "cover": "https://i.ibb.co/LRD7n5W/2022-Official-Prize-Photo-1024x683.jpg"
+    }
+  ]
+  
