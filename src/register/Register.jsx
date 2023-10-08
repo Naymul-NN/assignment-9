@@ -1,11 +1,13 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link,  useNavigate,  } from "react-router-dom";
 import { AuthContext } from "../contaxapi/Authprovider";
 import toast from "react-hot-toast";
 
 const Register = () => {
         
   const {createUser} = useContext(AuthContext);
+  const [error,setError]=useState("");
+  const navigate = useNavigate();
    
     const handleRegister = (e) =>{
           e.preventDefault();
@@ -13,10 +15,25 @@ const Register = () => {
           const email = e.target.email.value; 
           const password = e.target.password.value ;
 
+          //validation
+           setError('');
+          if(password.length < 6){
+           setError("error ! your password at lest 6 character")
+           return;
+
+          }else if( !/[A-Z]/.test(password)){
+             setError('error ! provide a uppercase latter')
+             return;
+          }else if(!/[!@#$%^&*]/.test(password)){
+            setError('please ! provide a sepcial character')
+            return;
+          }
+
          createUser(email,password)
          .then(result =>{
            console.log(result.user)
            toast.success('Congratulation ! register seccessfull')
+             navigate("/");
          })
          .catch(error => {
           console.error(error)
@@ -58,6 +75,7 @@ const Register = () => {
         <div className="form-control mt-6">
           <button className="btn btn-primary">register</button>
         </div>
+        <p className="text-red-500 font-bold">{error}</p>
       </form>
       <p>if you have alrady an account !<Link to='/login' className="text-green-500 font-bold"> login</Link></p>
     </div>

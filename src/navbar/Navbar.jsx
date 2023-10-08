@@ -80,7 +80,11 @@ const Navbar = () => {
       {navLinks}
     </ul>
   </div>
+  
   <div className="navbar-end">
+  {
+    user && <h1>{user.email}</h1>
+  }
    {
       user ?
       <button onClick={handleLogout} className="btn btn-sm btn-primary">log out</button>

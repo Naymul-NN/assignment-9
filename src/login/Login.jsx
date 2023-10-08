@@ -1,25 +1,49 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../contaxapi/Authprovider";
 import toast from "react-hot-toast";
+import { GoogleAuthProvider } from "firebase/auth";
 
 const Login = () => {
-    const {userLogin} = useContext(AuthContext);
+    const location = useLocation();
+    console.log(location);
+    const navigate = useNavigate();
+    const {googleLogin, userLogin} = useContext(AuthContext);
+    const [loginError,setLoginError]= useState("");
+
+    const provider = new GoogleAuthProvider();
 
   const handleLogin = (e) =>{
     e.preventDefault();
     const email = e.target.email.value; 
     const password = e.target.password.value ;
+
+    setLoginError("");
      userLogin(email,password)
      .then(result =>{
       console.log(result.user)
       toast.success('log in successfull')
+      navigate(location?.state ? location.state: "/")
      })
      .catch(error=>{
       console.error(error)
+      setLoginError("opps...! Invalid email or password")
      })
 
 }
+
+   const handlegooleLogIn=()=>{
+      googleLogin(provider)
+      .then(result => {
+        console.log(result.user)
+        toast.success("good job ! you are our member now ")
+        navigate(location?.state ? location.state: "/")
+      })
+      .catch(error =>{
+        console.error(error)
+      })
+
+   }
     return (
         <div>
             
@@ -46,6 +70,8 @@ const Login = () => {
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login</button>
         </div>
+        <p className="text-red-500 font-bold">{loginError}</p>
+        <button onClick={handlegooleLogIn} className="btn">Go with google</button>
       </form>
       <p>If you are new here! <Link to='/register' className="text-green-400 font-bold" >Register</Link></p>
     </div>
