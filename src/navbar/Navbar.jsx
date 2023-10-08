@@ -58,11 +58,43 @@ const Navbar = () => {
               Register
                 </NavLink>
               </li>
+              {
+                user &&
+                <ul className=" flex">
+                <li className="px-5">
+              <NavLink to="/services"
+           style={({ isActive, isPending }) => {
+            return {
+               fontWeight: isActive ? "bold" : "",
+                color: isPending ? "" : "",
+            };
+             }}
+            >
+               Services
+                </NavLink>
+              </li>
+                <li>
+              <NavLink to="/offer"
+           style={({ isActive, isPending }) => {
+            return {
+               fontWeight: isActive ? "bold" : "",
+                color: isPending ? "" : "",
+            };
+             }}
+            >
+               Offer
+                </NavLink>
+              </li>
+
+              </ul>
+               
+              
+              }
        
        </>
 
     return (
-        <div>
+        <div className="my-5">
             <div className="navbar bg-base-100">
   <div className="navbar-start">
     <div className="dropdown">
@@ -83,7 +115,7 @@ const Navbar = () => {
   
   <div className="navbar-end">
   {
-    user && <h1>{user.email}</h1>
+    user && <h1 className="pr-2"><span className="font-bold">user:</span>{user.email}</h1>
   }
    {
       user ?

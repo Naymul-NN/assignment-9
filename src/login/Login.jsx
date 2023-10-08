@@ -36,7 +36,7 @@ const Login = () => {
       googleLogin(provider)
       .then(result => {
         console.log(result.user)
-        toast.success("good job ! you are our member now ")
+        toast.success("good job ! log in successfull ")
         navigate(location?.state ? location.state: "/")
       })
       .catch(error =>{
