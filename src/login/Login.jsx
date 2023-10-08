@@ -1,6 +1,25 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../contaxapi/Authprovider";
+import toast from "react-hot-toast";
 
 const Login = () => {
+    const {userLogin} = useContext(AuthContext);
+
+  const handleLogin = (e) =>{
+    e.preventDefault();
+    const email = e.target.email.value; 
+    const password = e.target.password.value ;
+     userLogin(email,password)
+     .then(result =>{
+      console.log(result.user)
+      toast.success('log in successfull')
+     })
+     .catch(error=>{
+      console.error(error)
+     })
+
+}
     return (
         <div>
             
@@ -8,7 +27,7 @@ const Login = () => {
   <div className="hero-content flex-col lg:flex-row-reverse">
 
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-      <form  className="card-body">
+      <form onSubmit={handleLogin} className="card-body">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>

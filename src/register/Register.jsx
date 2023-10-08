@@ -1,6 +1,30 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../contaxapi/Authprovider";
+import toast from "react-hot-toast";
 
 const Register = () => {
+        
+  const {createUser} = useContext(AuthContext);
+   
+    const handleRegister = (e) =>{
+          e.preventDefault();
+          const name = e.target.name.value; 
+          const email = e.target.email.value; 
+          const password = e.target.password.value ;
+
+         createUser(email,password)
+         .then(result =>{
+           console.log(result.user)
+           toast.success('Congratulation ! register seccessfull')
+         })
+         .catch(error => {
+          console.error(error)
+         })
+
+        }
+
+
     return (
         <div>
             
@@ -8,19 +32,14 @@ const Register = () => {
   <div className="hero-content flex-col lg:flex-row-reverse">
    
     <div className="card flex-shrink-0   shadow-2xl bg-base-100">
-      <form  className="card-body">
+      <form onSubmit={handleRegister}  className="card-body">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Name</span>
           </label>
           <input type="name" placeholder="your name" name="name" className="input input-bordered" required />
         </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">photo</span>
-          </label>
-          <input type="photo" placeholder="photo url" name="photo" className="input input-bordered" required />
-        </div>
+       
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
