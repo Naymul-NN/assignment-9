@@ -1,6 +1,9 @@
 import Banner from "./Banner";
+import Client from "./Client";
 import Service from "./Service";
+import Why from "./Why";
 import Work from "./Work";
+import Footer from "../footer/Footer";
 
 const Home = () => {
     return (
@@ -9,7 +12,10 @@ const Home = () => {
             <Banner></Banner>
             <Service></Service>
             <Work></Work>
-        </div>
+            <Why></Why>
+            <Client></Client>
+            <Footer></Footer>
+            </div>
     );
 };
 

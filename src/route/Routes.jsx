@@ -8,11 +8,13 @@ import Login from "../login/Login";
 import PrivetRout from "../privet/PrivetRout";
 import Services from "../privet/Services";
 import Offer from "../privet/Offer";
+import ErrorPage from "../errorpage/ErrorPage";
 
 const router = createBrowserRouter([
     {
        path:'/',
        element: <Layout></Layout>,
+       errorElement:<ErrorPage></ErrorPage>,
        children:[
         {
             path:'/',

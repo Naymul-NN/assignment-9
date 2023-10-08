@@ -32,8 +32,8 @@ const About = () => {
                        <h1  className="text-2xl text-center text-purple-600 font-serif"> what type of event we manage</h1>
                        <div className="py-5" >
                         <div>
-                       <figure className="h-[18rem]"> <img  src="https://i.ibb.co/MkTLpxs/a6f7ac6120713fca9f3f29768001acb5.jpg" alt="" /></figure>
-                        <p className=" pl-5 text-white ">
+                       <figure className="h-[20rem]"> <img  src="https://i.ibb.co/CPkk4VK/8f6d1f4d09dc5ee9cf79a25ab6820fe8.jpg" alt="" /></figure>
+                        <p className=" pl-16 text-white ">
                        1. InnovateCon: Igniting Creativity in the Workplace <br />
                        2 . AchieveSummit: Reaching New Heights Together  <br />
                        3.  SynergyFusion: Collaborate, Create, Connect  <br />
