@@ -1,15 +1,14 @@
 import { Link } from "react-router-dom";
 
 
-
 const About = () => {
-  
-
+ 
+ 
     return (
         <div>
             <h1 className="text-4xl text-center my-6 font-serif text-pink-500"> AdK International ltd.</h1>
             <div className="grid md:grid-cols-4 grid-cols-1 gap-5 mb-7">
-                <div className="border">
+                <div  className="border">
                    <h1 className="text-2xl text-center text-purple-600 font-serif ">Our offices</h1>
                     <h1 className=" text-center font-bold border-b-2 py-4 mx-16">Headquater</h1>
                     <div className="text-center py-4"><li>Los Angeles</li></div>

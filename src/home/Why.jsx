@@ -4,7 +4,9 @@ const Why = () => {
         <div className="my-12 bg-purple-100 py-8 px-4">
             <h1 className="text-3xl text-center text-pink-600 font-serif"> WHY CHOOSE US FOR YOUR EVENT?</h1>
             <p className="text-center pb-4">Event that you will Remember</p>
-            <Marquee pauseOnHover={true} speed={50}>
+            <Marquee
+             pauseOnHover={true}
+              speed={50}>
             <div className="flex gap-14 justify-between">
             <div className="flex">
                <div>

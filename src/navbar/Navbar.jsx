@@ -70,7 +70,7 @@ const Navbar = () => {
             };
              }}
             >
-               Services
+               Blog
                 </NavLink>
               </li>
                 <li>
