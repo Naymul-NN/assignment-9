@@ -7,7 +7,7 @@ const About = () => {
     return (
         <div>
             <h1 className="text-4xl text-center my-6 font-serif text-pink-500"> AdK International ltd.</h1>
-            <div className="grid md:grid-cols-4 grid-cols-1 gap-5 mb-7">
+            <div className="grid lg:grid-cols-4 grid-cols-1 gap-5 mb-7">
                 <div  className="border">
                    <h1 className="text-2xl text-center text-purple-600 font-serif ">Our offices</h1>
                     <h1 className=" text-center font-bold border-b-2 py-4 mx-16">Headquater</h1>
@@ -31,8 +31,8 @@ const About = () => {
                        <h1  className="text-2xl text-center text-purple-600 font-serif"> what type of event we manage</h1>
                        <div className="py-5" >
                         <div>
-                       <figure className="h-[20rem]"> <img  src="https://i.ibb.co/CPkk4VK/8f6d1f4d09dc5ee9cf79a25ab6820fe8.jpg" alt="" /></figure>
-                        <p className=" pl-16 text-white ">
+                       <figure className=" lg:h-[20rem]"> <img  src="https://i.ibb.co/CPkk4VK/8f6d1f4d09dc5ee9cf79a25ab6820fe8.jpg" alt="" /></figure>
+                        <p className=" pl-16 lg:text-white ">
                        1. InnovateCon: Igniting Creativity in the Workplace <br />
                        2 . AchieveSummit: Reaching New Heights Together  <br />
                        3.  SynergyFusion: Collaborate, Create, Connect  <br />

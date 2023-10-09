@@ -1,4 +1,3 @@
-import { Form } from "react-router-dom"
 
 const Services = () => {
     return (
@@ -44,8 +43,8 @@ After the expo, gather feedback from exhibitors and attendees to evaluate the ev
 Expo event management is a multifaceted task that requires careful planning, attention to detail, and adaptability. By defining clear objectives, selecting the right venue, and implementing effective marketing strategies, you can create memorable and successful expo events that leave a lasting impact on both exhibitors and attendees. With continuous improvement and a commitment to excellence, you will be well on your way to mastering the art of expo event management.
                 </p>
             </div>
-            <div className="border">
-                <h1 className="text-2xl font-serif py-4">Write your blog here </h1>
+            <div className="p-7">
+                <h1 className="text-2xl text-pink-400 font-serif py-4">Write your blog here </h1>
                 <from>
                 <label className="py-3 " >Author Name:</label>
                 <input className="border" type="text" id="authorName" name="authorName" required/>

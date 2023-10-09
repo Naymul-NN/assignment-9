@@ -7,7 +7,7 @@ import Footer from "../footer/Footer";
 
 const Home = () => {
     return (
-        <div>
+        <div className="w-full h-auto overflow-x-hidden overflow-y-scroll no-scrollbar">
             
             <Banner></Banner>
             <Service></Service>

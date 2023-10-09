@@ -2,11 +2,13 @@ import { useContext, useState } from "react";
 import { Link,  useNavigate,  } from "react-router-dom";
 import { AuthContext } from "../contaxapi/Authprovider";
 import toast from "react-hot-toast";
+import { FaEye,FaEyeSlash } from 'react-icons/fa';
 
 const Register = () => {
         
   const {createUser} = useContext(AuthContext);
   const [error,setError]=useState("");
+  const [show,setshow]= useState(false);
   const navigate = useNavigate();
    
     const handleRegister = (e) =>{
@@ -45,10 +47,10 @@ const Register = () => {
     return (
         <div>
             
-            <div className="hero min-h-[400px] bg-base-200">
+            <div className="hero min-h-[400px] bg-pink-50">
   <div className="hero-content flex-col lg:flex-row-reverse">
    
-    <div className="card flex-shrink-0   shadow-2xl bg-base-100">
+    <div className="card flex-shrink-0   shadow-2xl bg-green-50">
       <form onSubmit={handleRegister}  className="card-body">
         <div className="form-control">
           <label className="label">
@@ -67,7 +69,8 @@ const Register = () => {
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" placeholder="password" name="password" className="input input-bordered" required />
+          <input type={show? "text" : "password"}  placeholder="password" name="password" className="input input-bordered" required />
+          <span  onClick={()=>setshow(!show)}>{show? <FaEyeSlash></FaEyeSlash>:<FaEye></FaEye>}</span>
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>

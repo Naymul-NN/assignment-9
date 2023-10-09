@@ -10,7 +10,7 @@ const Details = () => {
        <div className="mt-5">
         <h1 className="text-center text-3xl font-bold text-pink-600">About our service</h1>
          <div className="grid md:grid-cols-3 mt-4 gap-5">
-            <div className="border px-5">
+            <div className=" px-5">
               <h1 className="text-2xl text-pink-500 font-bold text-center py-3">Facilities we porvide free</h1>
                <h1 className="font-bold">1. Water system</h1>
                <br />

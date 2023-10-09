@@ -95,7 +95,9 @@ const Navbar = () => {
 
     return (
         <div className="my-5">
-            <div className="navbar bg-base-100">
+            <div className="navbar flex  bg-base-100">
+    
+
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -112,8 +114,12 @@ const Navbar = () => {
       {navLinks}
     </ul>
   </div>
+
   
-  <div className="navbar-end">
+
+  
+
+  <div className="navbar-end flex lg:flex-row flex-col ">
   {
     user && <h1 className="pr-2"><span className="font-bold">user:</span>{user.email}</h1>
   }
@@ -122,10 +128,13 @@ const Navbar = () => {
       <button onClick={handleLogout} className="btn btn-sm btn-primary">log out</button>
       :
       
-      <Link to ="/login"><button className="btn btn-sm btn-primary">log in</button></Link>
+      <Link to ="/login"><button className="btn  btn-sm btn-primary">log in</button></Link>
     
-   }
+   }  
   </div>
+
+  
+
 </div>
             
         </div>
